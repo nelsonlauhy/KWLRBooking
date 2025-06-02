@@ -8,11 +8,18 @@
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet">
   <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css' rel='stylesheet' />
   <style>
-    #sidebar {
-      width: 250px;
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
     }
     #calendar {
       padding: 20px;
+      min-height: 100vh;
+    }
+    #sidebar {
+      min-height: 100vh;
+      border-right: 1px solid #dee2e6;
     }
   </style>
 </head>
@@ -36,9 +43,9 @@
   </nav>
 
   <div class="container-fluid">
-    <div class="row">
+    <div class="row flex-nowrap">
       <!-- Sidebar -->
-      <div id="sidebar" class="bg-light col-md-2 p-3">
+      <div id="sidebar" class="bg-light col-auto col-md-2 p-3">
         <h5>Rooms</h5>
         <ul class="list-group">
           <li class="list-group-item">Training Room</li>
@@ -52,7 +59,7 @@
       </div>
 
       <!-- Calendar Section -->
-      <div class="col-md-10">
+      <div class="col p-0">
         <div id='calendar'></div>
       </div>
     </div>
